@@ -8,7 +8,7 @@ import { Button } from './ui/button'
 export default function ToogleDark() {
   const {theme,  setTheme } = useTheme()
   return (
-  <div className="absolute z-10 w-full mt-4  mr-8 grid justify-end">
+  <div className="absolute z-10 w-full mt-4  mr-8 grid justify-end px-6">
     <Button variant={'outline'} size={'icon'} className='cursor-pointer' onClick={() => theme === 'light' ? setTheme('dark') : setTheme('light')}>
       {theme === 'light' ? <MoonIcon />  : <SunIcon/>}
     </Button>

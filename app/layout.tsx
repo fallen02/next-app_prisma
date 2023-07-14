@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-
+import { Toaster } from '@/components/ui/toaster'
 import ToogleDark from '@/components/ToogleDark'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,6 +19,7 @@ export default function RootLayout({children}: {children: React.ReactNode
         <ThemeProvider attribute='class' defaultTheme='dark'>
         <ToogleDark />
          {children}
+         <Toaster/>
         </ThemeProvider>
         </body>
     </html>
